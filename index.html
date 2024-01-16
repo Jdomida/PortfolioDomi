@@ -1,53 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Tu Nombre - Portfolio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
   <style>
     body {
       font-family: 'Arial', sans-serif;
       background-color: #f8f9fa;
       color: #343a40;
     }
+
     .navbar {
-      background-color: #007bff;
+      background-color: #000000;
       color: #ffffff;
     }
+
     .navbar-brand {
       font-size: 1.5rem;
       font-weight: bold;
     }
-    .jumbotron {
-      background-color: #007bff;
-      color: #ffffff;
-      padding: 2rem;
-      margin-bottom: 0;
+
+    .navbar-nav .nav-item .nav-link {
+      transition: transform 0.3s;
     }
+
+    .navbar-nav .nav-item .nav-link:hover {
+      transform: scale(1.1);
+    }
+
+    .jumbotron {
+
+      border-radius: 15px;
+      border: 2px solid #ffffff;
+      background-color: #000000;
+      padding: 2rem;
+      margin: 35px;
+    }
+
+    #about:hover {
+      color: #fff;
+      /* Cambiar el color del texto a blanco */
+      box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+      /* Añadir sombra con el color del texto actual */
+      border-color: rgba(128, 128, 128, 0.5);
+    }
+
     .section-heading {
       font-size: 2rem;
       margin-bottom: 20px;
     }
+
     .project-item {
       margin-bottom: 30px;
     }
+
+    #btn-back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Tu Nombre</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand">¡Hola! Bienvenido/a a mi página de presentación.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#about">Acerca de Mí</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#exp">Experiencia</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects">Proyectos</a>
@@ -61,24 +100,38 @@
   </nav>
 
   <!-- Jumbotron -->
-  <div class="jumbotron text-center">
-    <h1 class="display-4">Hola, soy Tu Nombre</h1>
-    <p class="lead">Un apasionado programador listo para enfrentar nuevos desafíos.</p>
-  </div>
-
-  <!-- About Me Section -->
-  <div class="container" id="about">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <h2 class="section-heading">Acerca de Mí</h2>
-        <p class="text-muted">Aquí puedes agregar una breve descripción sobre ti, tus habilidades, y tu pasión por la programación.</p>
-      </div>
-    </div>
+  <div class="jumbotron text-center" id="about" style="transition: color 0.3s, box-shadow 0.3s;">
+    <h1 class="display-5">¡Hola!, soy Domi, este es mi Portfolio</h1>
+    <p style="transition: color 0.3s;">Un apasionado programador fullstack en inicio de carrera, con habilidades en
+      desarrollo frontend y backend.
+      Este año culminé mis estudios en Desarrollo de Aplicaciones Multiplataformas, y a mis 26 años, estoy comprometido
+      con el aprendizaje continuo. Resido en un pueblo de Sevilla, tengo coche propio y estoy
+      listo para contribuir y crecer en proyectos desafiantes. ¡Explora mi portfolio y descubre cómo puedo aportar a tu
+      equipo!</p>
   </div>
 
   <!-- Projects Section -->
+  <div class="container" id="exp">
+    <h2 class="section-heading text-center">Experiencia</h2>
+    <!-- Ejemplo de un proyecto, puedes duplicar estos bloques según tus proyectos -->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card project-item">
+          <img src="" class="card-img-top" alt="Experiencia 1">
+          <div class="card-body">
+            <h5 class="card-title">Nombre del Trabajo 1</h5>
+            <p class="card-text">Breve descripción del Trabajo.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Puedes duplicar este bloque para más proyectos -->
+    </div>
+  </div>
+
+
+  <!-- Projects Section -->
   <div class="container" id="projects">
-    <h2 class="section-heading text-center">Proyectos</h2>
+    <h2 class="section-heading text-center">Mis Proyectos</h2>
     <!-- Ejemplo de un proyecto, puedes duplicar estos bloques según tus proyectos -->
     <div class="row">
       <div class="col-lg-4">
@@ -95,79 +148,84 @@
     </div>
   </div>
 
- <!-- Contact Section -->
-<div class="container" id="contact">
-  <h2 class="section-heading text-center mb-4">Contacto</h2>
-  <div class="row text-center">
+  <!-- Contact Section -->
+  <div class="container" id="contact">
+    <h2 class="section-heading text-center mb-4">Forma de Contacto</h2>
+    <div class="row text-center">
 
-    <!-- Tarjeta para Correo Electrónico -->
-    <div class="col-lg-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <i class="fas fa-envelope fa-3x mb-2"></i>
-          <h5 class="card-title">Correo Electrónico</h5>
-          <p class="card-text">
-            <a href="mailto:jdelalo920@gmail.com">jdelalo920@gmail.com</a>
-          </p>
+      <!-- Tarjeta para Correo Electrónico -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fas fa-envelope fa-3x mb-2"></i>
+            <h5 class="card-title">Correo Electrónico</h5>
+            <p class="card-text">
+              <a href="mailto:jdelalo920@gmail.com">jdelalo920@gmail.com</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tarjeta para Teléfono Fijo -->
-    <div class="col-lg-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <i class="fas fa-phone fa-3x mb-2"></i>
-          <h5 class="card-title">Teléfono Fijo</h5>
-          <p class="card-text">
-            <a href="tel:+34636062920">636062920</a>
-          </p>
+      <!-- Tarjeta para Teléfono Móvil -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fab fa-whatsapp fa-3x mb-2"></i>
+            <h5 class="card-title">Teléfono Móvil</h5>
+            <p class="card-text">
+              <a href="tel:636062920">636062920</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tarjeta para Teléfono Móvil -->
-    <div class="col-lg-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <i class="fas fa-mobile-alt fa-3x mb-2"></i>
-          <h5 class="card-title">Teléfono Móvil</h5>
-          <p class="card-text">
-            <a href="tel:+955870364">955870364</a>
-          </p>
+      <!-- Tarjeta para Teléfono Fijo -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fas fa-phone fa-3x mb-2"></i>
+            <h5 class="card-title">Teléfono Fijo</h5>
+            <p class="card-text">
+              <a href="tel:955870364">955870364</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tarjeta para LinkedIn -->
-    <div class="col-lg-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <i class="fab fa-linkedin fa-3x mb-2"></i>
-          <h5 class="card-title">LinkedIn</h5>
-          <p class="card-text">
-            <a href="https://www.linkedin.com/in/josé-domingo-delgado-alonso-925008282/" target="_blank">José Domingo Delgado Alonso</a>
-          </p>
+      <!-- Tarjeta para LinkedIn -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fab fa-linkedin fa-3x mb-2"></i>
+            <h5 class="card-title">LinkedIn</h5>
+            <p class="card-text">
+              <a href="https://www.linkedin.com/in/josé-domingo-delgado-alonso-925008282/" target="_blank">José Domingo
+                Delgado Alonso</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tarjeta para GitHub -->
-    <div class="col-lg-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <i class="fab fa-github fa-3x mb-2"></i>
-          <h5 class="card-title">GitHub</h5>
-          <p class="card-text">
-            <a href="https://github.com/Jdomida" target="_blank">Jdomida</a>
-          </p>
+      <!-- Tarjeta para GitHub -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <i class="fab fa-github fa-3x mb-2"></i>
+            <h5 class="card-title">GitHub</h5>
+            <p class="card-text">
+              <a href="https://github.com/Jdomida" target="_blank">Jdomida</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
-</div>
 
+  <!-- Back to top button -->
+  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Footer -->
   <footer class="py-4 bg-dark text-white">
@@ -180,5 +238,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
