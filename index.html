@@ -7,8 +7,6 @@
   <title>Tu Nombre - Portfolio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -43,7 +41,7 @@
       margin: 35px;
     }
 
-    .jumbotron img{
+    .jumbotron img {
       border-radius: 20px;
       border: 2px solid #ffffff;
       height: 200px;
@@ -51,13 +49,22 @@
       margin-bottom: 2%;
       margin-top: 2%;
     }
-    
+
     #about:hover {
       color: #fff;
       /* Cambiar el color del texto a blanco */
       box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
       /* Añadir sombra con el color del texto actual */
       border-color: rgba(128, 128, 128, 0.5);
+    }
+
+    #exp img {
+      display: block;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 250px;
+      height: auto;
     }
 
     .section-heading {
@@ -83,7 +90,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand">¡Hola! Bienvenido/a a mi página de presentación.</a>
+      <a class="navbar-brand">Jdomida.</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -91,17 +98,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#about">Acerca de Mí</a>
+            <a class="nav-link" href="#descripcion">Acerca de Mí</a>
           </li>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#exp">Experiencia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Proyectos</a>
+            <a class="nav-link" href="#formacion">Formación</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contacto</a>
+            <a class="nav-link" href="#proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
           </li>
         </ul>
       </div>
@@ -109,7 +119,7 @@
   </nav>
 
   <!-- Jumbotron -->
-  <div class="jumbotron text-center" id="about" style="transition: color 0.3s, box-shadow 0.3s;">
+  <div class="jumbotron text-center" id="descripcion" style="transition: color 0.3s, box-shadow 0.3s;">
     <h1 class="display-5">¡Hola!, soy Domi, este es mi Portfolio</h1>
     <img src="src/img/img_perfil.png" alt="imagen de perfil.">
     <p style="transition: color 0.3s;">Un apasionado programador fullstack en inicio de carrera, con habilidades en
@@ -127,10 +137,11 @@
     <div class="row">
       <div class="col-lg-4">
         <div class="card project-item">
-          <img src="" class="card-img-top" alt="Experiencia 1">
+          <img src="src/img/tecinet-logo.png" class="card-img-top" alt="Logo de Tecinet">
           <div class="card-body">
-            <h5 class="card-title">Nombre del Trabajo 1</h5>
-            <p class="card-text">Breve descripción del Trabajo.</p>
+            <h5 class="card-title">Prácticas FCT en Tecinet - Informática, Comunicaciones, Internet.</h5>
+            <p class="card-text">Desarrollo de un proyecto web destinado a la gestión integral del catálogo y la reserva de vehículos y material de construcción</p>
+            <p class="card-text">Integración de un dispositivo Android con un ERP de farmacia</p>
           </div>
         </div>
       </div>
@@ -138,9 +149,53 @@
     </div>
   </div>
 
+  <!-- Estudios Section -->
+  <div class="container" id="formacion">
+    <h2 class="section-heading text-center">Título / Formación</h2>
+    <!-- Ejemplo de un proyecto, puedes duplicar estos bloques según tus proyectos -->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card project-item">
 
-  <!-- Projects Section -->
-  <div class="container" id="projects">
+          <div class="card-body">
+            <p class="text-small">Ciclo Formativo Grado Superior</p>
+            <h5 class="card-title">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</h5>
+            <p class="card-text">Septiembre de 2022 - Junio de 2023</p>
+          </div>
+        </div>
+      </div>
+      <!-- Puedes duplicar este bloque para más proyectos -->
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card project-item">
+
+          <div class="card-body">
+            <p class="text-small">Ciclo Formativo Grado Superior</p>
+            <h5 class="card-title">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</h5>
+            <p class="card-text">Septiembre de 2022 - Junio de 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card project-item">
+
+          <div class="card-body">
+            <p class="text-small">Bachillerato de Ciencias Tecnológicas</p>
+            <h5 class="card-title">Título de Bachillerato en la modalidad de Ciencias Tecnológicas.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Seccion Proyectos -->
+  <div class="container" id="proyectos">
     <h2 class="section-heading text-center">Mis Proyectos</h2>
     <!-- Ejemplo de un proyecto, puedes duplicar estos bloques según tus proyectos -->
     <div class="row">
@@ -148,9 +203,9 @@
         <div class="card project-item">
           <img src="" class="card-img-top" alt="Proyecto 1">
           <div class="card-body">
-            <h5 class="card-title">Nombre del Proyecto 1</h5>
-            <p class="card-text">Breve descripción del proyecto.</p>
-            <a href="#" class="btn btn-primary">Ver Detalles</a>
+            <h5 class="card-title">Ciudad Mejorada</h5>
+            <p class="card-text">Aplicación móvil de reporte de incidencias de la via pública.</p>
+            <a href="#" class="btn btn-dark btn-rounded">Ver Detalles</a>
           </div>
         </div>
       </div>
@@ -159,7 +214,7 @@
   </div>
 
   <!-- Contact Section -->
-  <div class="container" id="contact">
+  <div class="container" id="contacto">
     <h2 class="section-heading text-center mb-4">Formas de Contacto</h2>
     <div class="row text-center">
 
