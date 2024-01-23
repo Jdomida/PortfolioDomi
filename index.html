@@ -7,82 +7,10 @@
   <title>Tu Nombre - Portfolio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-      color: #343a40;
-    }
-
-    .navbar {
-      background-color: #000000;
-      color: #ffffff;
-    }
-
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .navbar-nav .nav-item .nav-link {
-      transition: transform 0.3s;
-    }
-
-    .navbar-nav .nav-item .nav-link:hover {
-      transform: scale(1.1);
-    }
-
-    .jumbotron {
-
-      border-radius: 15px;
-      border: 2px solid #ffffff;
-      background-color: #000000;
-      padding: 2rem;
-      margin: 35px;
-    }
-
-    .jumbotron img {
-      border-radius: 20px;
-      border: 2px solid #ffffff;
-      height: 200px;
-      width: 150px;
-      margin-bottom: 2%;
-      margin-top: 2%;
-    }
-
-    #about:hover {
-      color: #fff;
-      /* Cambiar el color del texto a blanco */
-      box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
-      /* Añadir sombra con el color del texto actual */
-      border-color: rgba(128, 128, 128, 0.5);
-    }
-
-    #exp img {
-      display: block;
-      margin-top: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 250px;
-      height: auto;
-    }
-
-    .section-heading {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .project-item {
-      margin-bottom: 30px;
-    }
-
-    #btn-back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: none;
-    }
-  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="src/css/estilos.css">
 </head>
 
 <body>
@@ -118,38 +46,73 @@
     </div>
   </nav>
 
-  <!-- Jumbotron -->
-  <div class="jumbotron text-center" id="descripcion" style="transition: color 0.3s, box-shadow 0.3s;">
-    <h1 class="display-5">¡Hola!, soy Domi, este es mi Portfolio</h1>
-    <img src="src/img/img_perfil.png" alt="imagen de perfil.">
-    <p style="transition: color 0.3s;">Un apasionado programador fullstack en inicio de carrera, con habilidades en
-      desarrollo frontend y backend.
-      Este año culminé mis estudios en Desarrollo de Aplicaciones Multiplataformas, y a mis 26 años, estoy comprometido
-      con el aprendizaje continuo. Resido en un pueblo de Sevilla, tengo coche propio y estoy
-      listo para contribuir y crecer en proyectos desafiantes. ¡Explora mi portfolio y descubre cómo puedo aportar a tu
-      equipo!</p>
+  <!-- Carrusel -->
+  <div id="carrusel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Página 1 -->
+      <div class="carousel-item active" data-interval="10000">
+        <div class="jumbotron text-center">
+          <h1 class="display-5">¡Hola!, soy Domi, este es mi Portfolio</h1>
+          <img src="src/img/img_perfil.png" alt="imagen de perfil.">
+          <p>Un apasionado programador fullstack en inicio de carrera, con habilidades en desarrollo frontend y backend.
+            Este año culminé mis estudios en Desarrollo de Aplicaciones Multiplataformas, y a mis 26 años, estoy
+            comprometido con el aprendizaje continuo. Resido en un pueblo de Sevilla, tengo coche propio y estoy listo
+            para contribuir y crecer en proyectos desafiantes. ¡Explora mi portfolio y descubre cómo puedo aportar a tu
+            equipo!</p>
+        </div>
+      </div>
+      <!-- Página 2 -->
+      <div class="carousel-item" data-interval="10000">
+        <div class="jumbotron text-center">
+          <h1 class="display-5">Página 2</h1>
+          <p>Contenido de la página 2</p>
+        </div>
+      </div>
+      <!-- Página 3 -->
+      <div class="carousel-item" data-interval="10000">
+        <div class="jumbotron text-center">
+          <h1 class="display-5">Página 3</h1>
+          <p>Contenido de la página 3</p>
+        </div>
+      </div>
+      <!-- Página 4 -->
+      <div class="carousel-item" data-interval="10000">
+        <div class="jumbotron text-center">
+          <h1 class="display-5">Página 4</h1>
+          <p>Contenido de la página 4</p>
+        </div>
+      </div>
+    </div>
+    <!-- Controles del carrusel -->
+    <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
   </div>
 
-  <!-- Projects Section -->
+  <!-- Experiencia Seccion -->
   <div class="container" id="exp">
     <h2 class="section-heading text-center">Experiencia</h2>
-    <!-- Ejemplo de un proyecto, puedes duplicar estos bloques según tus proyectos -->
     <div class="row">
       <div class="col-lg-4">
         <div class="card project-item">
           <img src="src/img/tecinet-logo.png" class="card-img-top" alt="Logo de Tecinet">
           <div class="card-body">
             <h5 class="card-title">Prácticas FCT en Tecinet - Informática, Comunicaciones, Internet.</h5>
-            <p class="card-text">Desarrollo de un proyecto web destinado a la gestión integral del catálogo y la reserva de vehículos y material de construcción</p>
+            <p class="card-text">Desarrollo de un proyecto web destinado a la gestión integral del catálogo y la reserva
+              de vehículos y material de construcción</p>
             <p class="card-text">Integración de un dispositivo Android con un ERP de farmacia</p>
           </div>
         </div>
       </div>
-      <!-- Puedes duplicar este bloque para más proyectos -->
     </div>
   </div>
 
-  <!-- Estudios Section -->
+  <!-- Estudios Seccion -->
   <div class="container" id="formacion">
     <h2 class="section-heading text-center">Título / Formación</h2>
     <!-- Ejemplo de un proyecto, puedes duplicar estos bloques según tus proyectos -->
@@ -293,17 +256,74 @@
   </button>
 
   <!-- Footer -->
-  <footer class="py-4 bg-dark text-white">
-    <div class="container text-center">
-      <p>José Domingo Delgado Alonso.</p>
+<footer class="py-4 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center text-md-left">
+        <p class="mb-0">Portfolio José Domingo</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <p class="mb-0" style="font-weight: bold; font-size: larger;">Jdomida.</p>
+      </div>
+      <div class="col-md-4 text-center text-md-right">
+        <a href="https://www.facebook.com/" target="_blank" class="text-white">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="text-white ml-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white ml-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" class="text-white ml-2">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" class="text-white ml-2">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:your-email@example.com" class="text-white ml-2">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      // Ocultar los controles cuando se inicia la página
+      $('.carousel-control-prev, .carousel-control-next').hide();
 
+      // Mostrar los controles cuando la animación se detiene
+      $('#carrusel').on('slid.bs.carousel', function () {
+        $('.carousel-control-prev, .carousel-control-next').show();
+      });
+
+      // Ocultar los controles cuando comienza la animación
+      $('#carrusel').on('slide.bs.carousel', function () {
+        $('.carousel-control-prev, .carousel-control-next').hide();
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      // Volver arriba suavemente al hacer clic en el botón
+      $('#btn-back-to-top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+      });
+  
+      // Mostrar u ocultar el botón basado en el desplazamiento de la página
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('#btn-back-to-top').fadeIn();
+        } else {
+          $('#btn-back-to-top').fadeOut();
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
